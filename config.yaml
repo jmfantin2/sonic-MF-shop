@@ -21,3 +21,4 @@ params:
     ]
   cta_texto: 'Comprar Topo de Bolo'
   cta_link: 'https://go.hotmart.com/P97763565E'
+  decoration: 'images/sonic.gif'

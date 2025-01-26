@@ -231,3 +231,11 @@ footer a:hover {
     width: fit-content;
   }
 }
+
+.sonic-decoration {
+  position: fixed; /* Permite que o Sonic fique fixo na tela ao invés da página */
+  bottom: 0; /* Alinha ao fundo da janela */
+  left: 10px; /* Ajuste horizontal, conforme necessário */
+  z-index: 10; /* Certifica-se de que o gif fique visível acima de outros elementos */
+  width: 90px; /* Ajuste o tamanho do Sonic conforme necessário */
+}
