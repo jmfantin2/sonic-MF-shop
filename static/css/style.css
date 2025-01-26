@@ -1,0 +1,233 @@
+/* Variáveis de Cores */
+:root {
+  --background-from: #001f54; /* Azul escuro inspirado no Sonic */
+  --background-to: #0080ff; /* Azul vibrante */
+  --text-base: #ffffff; /* Branco para textos */
+  --accent-color: #ffcc00; /* Amarelo inspirado nos anéis do Sonic */
+  --accent-secondary: #ff6600; /* Laranja brilhante */
+  --link-color: #ffcc00; /* Amarelo para links */
+  --link-hover: #ff8800; /* Laranja mais escuro no hover */
+  --cta-shadow: rgba(0, 123, 255, 0.4); /* Sombra azul */
+  --banner-overlay: rgba(0, 0, 0, 0.5); /* Fundo escurecido para contraste */
+}
+
+/* Reset básico */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos Gerais */
+body {
+  font-family: 'Rubik', Arial, sans-serif;
+  line-height: 1.6;
+  background: linear-gradient(
+    135deg,
+    var(--background-from),
+    var(--background-to)
+  );
+  color: var(--text-base);
+  display: flex; /* Flex container */
+  flex-direction: column; /* Alinha em uma coluna (header, conteúdo, footer) */
+  justify-content: space-between; /* Distribui verticalmente */
+  align-items: center; /* Centraliza horizontalmente */
+  min-height: 100vh; /* Garante que ocupe a altura total da tela */
+  margin: 0;
+}
+
+/* Links Globais */
+a {
+  color: var(--link-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--text-base);
+}
+
+/* Contêiner Principal */
+main {
+  width: 100%;
+  max-width: 1100px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Logo com Link */
+.logo-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px;
+  background: linear-gradient(135deg, var(--cta-shadow), var(--background-to));
+  border-bottom: 1px solid var(--accent-secondary);
+}
+
+.logo-section img {
+  max-width: 150px;
+  cursor: pointer;
+}
+
+.header-link {
+  color: var(--link-color);
+  padding: 10px 20px;
+  border: 2px solid var(--link-color);
+  border-radius: 5px;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.header-link:hover {
+  background-color: var(--accent-color);
+  color: var(--background-from);
+  box-shadow: 0px 4px 8px var(--cta-shadow);
+}
+
+/* Banner e Conteúdo */
+.banner-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: var(--banner-overlay);
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+.banner-section img {
+  max-width: 300px;
+  border-radius: 8px;
+}
+
+.content-section {
+  padding: 20px;
+}
+
+.titulo {
+  color: var(--accent-color);
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.subtitulo {
+  font-size: 1.4rem;
+  color: var(--text-base);
+  margin-bottom: 20px;
+}
+
+/* Disclaimer */
+.disclaimer-section {
+  margin: 20px 0;
+}
+
+.disclaimer {
+  font-size: 1rem;
+  color: var(--text-base);
+}
+
+/* Botões */
+.button-section {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.cta-button {
+  background: linear-gradient(135deg, var(--link-color), var(--link-hover));
+  color: var(--background-from);
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background: linear-gradient(
+    135deg,
+    var(--accent-secondary),
+    var(--link-hover)
+  );
+  transform: translateY(-2px);
+  box-shadow: 0px 6px 12px rgba(0, 91, 179, 0.5);
+}
+
+/* Oferta */
+.offer-section {
+  text-align: center;
+  margin: 40px 0;
+  padding: 20px;
+  background: linear-gradient(
+    135deg,
+    var(--background-from),
+    var(--background-to)
+  );
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.offer-section h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--accent-color);
+  margin-bottom: 10px;
+}
+
+.offer-section p {
+  font-size: 1.2rem;
+  color: var(--text-base);
+}
+
+/* Rodapé */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--background-to);
+  color: var(--text-base);
+  border-top: 1px solid var(--accent-secondary);
+}
+
+footer a {
+  color: var(--link-color);
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: var(--accent-color);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .logo-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .offer-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .offer-section p {
+    font-size: 1rem;
+  }
+
+  .banner-content-wrapper {
+    padding: 10px;
+  }
+
+  .header-link {
+    margin-top: 10px;
+    width: fit-content;
+  }
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ .Site.Title }}</title>
+    <meta name="description" content="{{ .Site.Params.description }}" />
+    <link rel="stylesheet" href="{{ "css/style.css" | relURL }}" />
+    <link rel="icon" href="{{ "favicon.png" | relURL }}" type="image/x-icon" />
+  </head>
+  <body>
+    <main>
+      <!-- Logo e Banner -->
+      <section class="logo-section">
+        <img src="{{ .Site.Params.logo | relURL }}" alt="Logo Sonic" />
+        <a href="{{ .Site.Params.cta_link }}" class="header-link">
+          {{ .Site.Params.button_texto }}
+        </a>
+      </section>
+
+      <!-- Banner Principal -->
+      <div class="banner-content-wrapper">
+        <section class="banner-section">
+          <img
+            src="{{ .Site.Params.banner | relURL }}"
+            alt="Banner do Topo de Bolo Sonic"
+          />
+        </section>
+        <section class="content-section">
+          <div class="cta-section">
+            <h1 class="titulo">{{ .Site.Params.titulo }}</h1>
+            <h2 class="subtitulo">{{ .Site.Params.subtitulo }}</h2>
+          </div>
+          <div class="disclaimer-section">
+            {{ range .Site.Params.disclaimer }}
+            <p class="disclaimer">{{ . }}</p>
+            {{ end }}
+          </div>
+          <div class="button-section">
+            <a href="{{ .Site.Params.cta_link }}" class="cta-button">
+              {{ .Site.Params.cta_texto }}
+            </a>
+          </div>
+        </section>
+      </div>
+
+      <!-- Oferta -->
+      <section class="offer-section">
+        <h2>FRETE GRÁTIS PARA TODO O BRASIL</h2>
+        <p>De R$ 50,00 por apenas R$ 39,90!</p>
+        <div class="button-section">
+          <a href="{{ .Site.Params.cta_link }}" class="cta-button">
+            Encomende Agora
+          </a>
+        </div>
+      </section>
+
+      <!-- Rodapé -->
+      <footer class="footer-section">
+        <p>&copy; {{ now.Format "2006" }} <strong>meufuturo.shop</strong></p>
+        <p>
+          <a href="{{ "privacy" | relURL }}">Política de Privacidade</a> |
+          <a href="{{ "terms" | relURL }}">Termos de Serviço</a>
+        </p>
+      </footer>
+    </main>
+  </body>
+</html>

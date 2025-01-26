@@ -1,0 +1,23 @@
+baseURL: 'https://sonic.meufuturo.shop/'
+languageCode: 'pt-br'
+title: 'Topo de Bolo Sonic | meufuturo.shop'
+enableRobotsTXT: true
+defaultContentLanguage: 'pt-br'
+
+# SEO & Produto
+params:
+  description: 'Transforme seu bolo em uma obra-prima com nosso topo de bolo personalizado do Sonic. Envio grátis para todo o Brasil!'
+  keywords: 'Topo de bolo Sonic, decoração de festa, bolo personalizado, Sonic'
+  logo: 'images/sonic-logo.png'
+  button_texto: 'Comprar Agora'
+  banner: 'images/sonic-banner.png'
+  titulo: 'Topo de Bolo Sonic Personalizado'
+  subtitulo: 'Dê um toque especial ao seu bolo com o nosso topo de bolo exclusivo do Sonic!'
+  disclaimer:
+    [
+      '– Produto pronto para uso: já impresso e montado.',
+      '– Frete grátis para todo o Brasil.',
+      '– Envio rápido, entre 5 a 10 dias.',
+    ]
+  cta_texto: 'Comprar Topo de Bolo'
+  cta_link: 'https://go.hotmart.com/P97763565E'
