@@ -17,13 +17,32 @@
 
       gtag('config', 'AW-16762594711');
     </script>
+    <!-- Event snippet for Purchase conversion page
+    In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+    <script>
+      function gtag_report_conversion(url) {
+        var callback = function () {
+          if (typeof(url) != 'undefined') {
+            window.location = url;
+          }
+        };
+        gtag('event', 'conversion', {
+            'send_to': 'AW-16762594711/vxFZCNeT5-QZEJfLg7k-',
+            'value': 1.0,
+            'currency': 'BRL',
+            'transaction_id': '',
+            'event_callback': callback
+        });
+        return false;
+      }
+      </script>
   </head>
   <body>
     <main>
       <!-- Logo e Banner -->
       <section class="logo-section">
         <img src="{{ .Site.Params.logo | relURL }}" alt="Logo Sonic" />
-        <a href="{{ .Site.Params.cta_link }}" class="header-link">
+        <a href="{{ .Site.Params.cta_link }}" class="header-link" onclick="return gtag_report_conversion('{{ .Site.Params.cta_link }}');">
           {{ .Site.Params.button_texto }}
         </a>
       </section>
@@ -47,7 +66,7 @@
             {{ end }}
           </div>
           <div class="button-section">
-            <a href="{{ .Site.Params.cta_link }}" class="cta-button">
+            <a href="{{ .Site.Params.cta_link }}" class="cta-button" onclick="return gtag_report_conversion('{{ .Site.Params.cta_link }}');">
               {{ .Site.Params.cta_texto }}
             </a>
           </div>
@@ -58,7 +77,7 @@
       <section class="offer-section">
         <h2>FRETE GRÁTIS PARA TODO O BRASIL</h2>
         <div class="button-section">
-          <a href="{{ .Site.Params.cta_link }}" class="cta-button">
+          <a href="{{ .Site.Params.cta_link }}" class="cta-button" onclick="return gtag_report_conversion('{{ .Site.Params.cta_link }}');">
             Encomende Agora
           </a>
         </div>
